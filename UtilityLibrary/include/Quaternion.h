@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Vector3.h" // Asegúrate de tener una clase Vector3 definida.
-#include "Utilities.h" // Asegúrate de tener tus funciones matemáticas necesarias, como sqrt().
+#include "Vector3.h"
+#include "Utilities.h" 
 
 class Quaternion {
 public:
