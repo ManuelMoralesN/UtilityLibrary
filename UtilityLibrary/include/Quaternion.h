@@ -30,8 +30,10 @@ public:
      * @param angle Ángulo de rotación en radianes.
      */
     Quaternion(const Vector3& axis, float angle) {
-        float halfAngle = angle * 0.5f;
-        float sinHalfAngle = sin(halfAngle);
+        float 
+        halfAngle = angle * 0.5f;
+        float 
+        sinHalfAngle = sin(halfAngle);
         w = cos(halfAngle);
         x = axis.x * sinHalfAngle;
         y = axis.y * sinHalfAngle;
@@ -84,7 +86,8 @@ public:
      * @return El cuaternión normalizado.
      */
     Quaternion normalize() const {
-        float mag = magnitude();
+        float 
+        mag = magnitude();
         if (mag == 0) {
             return Quaternion(0, 0, 0, 0); // Devuelve un cuaternión nulo si la magnitud es 0.
         }
@@ -104,7 +107,8 @@ public:
      * @return El cuaternión inverso.
      */
     Quaternion inverse() const {
-        float magSquared = w * w + x * x + y * y + z * z;
+        float 
+        magSquared = w * w + x * x + y * y + z * z;
         if (magSquared == 0) {
             return Quaternion(0, 0, 0, 0); // Devuelve un cuaternión nulo si la magnitud es 0.
         }
@@ -126,7 +130,8 @@ public:
      * @brief Devuelve un puntero a los componentes del cuaternión.
      * @return Un puntero a los valores w, x, y, z.
      */
-    float* data() {
+    float* 
+    data() {
         return &w;
     }
 
@@ -134,7 +139,9 @@ public:
      * @brief Devuelve un puntero constante a los componentes del cuaternión.
      * @return Un puntero constante a los valores w, x, y, z.
      */
-    const float* data() const {
+    const 
+    float* 
+    data() const {
         return &w;
     }
 };
